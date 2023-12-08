@@ -25,7 +25,7 @@ class StreamCamp {
     // 必須說嚴謹寫法得是判斷老鼠以後的域名，不然gmail@yahoo.com.tw怎麼辦= =
 
     // 置換術（不會影響原本的member!!）
-    List<Member> updateMemberId = member.stream().map(e -> {
+    List<Member> updateMemberId = member.stream().map(e -> { // 變數名稱不太好..
       Member updateMember = new Member(); // 這裡變數竟然不能用跟外面一樣的...
       updateMember.setId("IT" + e.getId()); // 這裡有坑，要更新記得所有屬性都更新
       updateMember.setName(e.getName());
