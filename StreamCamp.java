@@ -73,7 +73,7 @@ class StreamCamp {
     // 用Optional的orElseThrow扔出例外
 
     // 你還可以過濾完資料後以for each異動資料庫內容
-    
+
   } // 我是result方法的結尾
 
 } // 我是Class結尾
