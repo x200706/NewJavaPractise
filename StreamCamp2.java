@@ -21,6 +21,9 @@ class StreamCamp2 {
     studentExamResults.stream()
         .filter(result -> result.score() > 80)
         .forEach(result -> System.out.println("表揚考試分數大於八十分的寶寶" + result.name()));
+
+    // Stream必須完成管道操作（collect forEach之類的）才會真的執行流
+    // 管道操作完成的流也不能重新collect forEach之類的
   }
 
 }
