@@ -83,6 +83,7 @@ class StreamCamp {
     sortMember.forEach(e -> System.out.println(e.getName()));
 
     // 分組術GroupBy
+    /*是說這接值型態這麼令人煩躁 我乾脆以後用var接好了 啊沒有用IDE要看再用.getClass().toString()*/
     Map<Optional<String>, List<Member>> memberMap = member.stream()
         .collect(Collectors.groupingBy(e -> Optional.ofNullable(e.getAge()))); // 千萬小心型別推斷
     // Map<String, List<Member>> memberMap = member.stream()
