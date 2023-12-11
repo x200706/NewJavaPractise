@@ -42,9 +42,7 @@ class StreamCamp2 {
         });
     // 沒有完成管道操作的多個流 可以用Stream.concat合用
 
-    // TODO 還沒看entrySet
-    // https://ithelp.ithome.com.tw/questions/10196384
-    // https://www.baeldung.com/java-maps-streams
+    // TODO Map透過entrySet轉回Set 下方才有stream方法
 
     // Stream.generate 憑空生流，可以用在不用迴圈產隨機數等
     // 說到這個生隨機數 由於Stream會執行自動裝拆箱，如果有明確要操作的型態，建議用子類別如IntStream等
@@ -52,12 +50,12 @@ class StreamCamp2 {
 
     // Main::isPrime
 
-    //TODO 說到Stream很久以前用過平行流開執行緒，但為甚麼執行的次數（range）跟我預期有落差呢...？
+    // TODO 說到Stream很久以前用過平行流開執行緒，但為甚麼執行的次數（range）跟我預期有落差呢...？
     // https://chat.openai.com/share/4022b256-5b00-4f02-a307-12ccc8633b35
-    //有待了解
+    // 有待了解
 
-    //TODO 我宣布暫時放棄Java17大師班..............
-    
+    // TODO 我宣布暫時放棄Java17大師班..............
+
   } // 我是result結尾
 } // 我是class結尾
 
