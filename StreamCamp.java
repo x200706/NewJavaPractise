@@ -33,6 +33,39 @@ class StreamCamp {
       updateMember.setPhone(e.getPhone());
       updateMember.setAge(e.getAge());
       return updateMember;
+      // TODO 還沒看：map()需要返回的情境
+      // 不return的錯誤：
+      /*
+       * ./StreamCamp.java:30: error: method map in interface Stream<T> cannot be
+       * applied to given types;
+       * List<Member> updateMemberId = member.stream().map(e -> { // 變數名稱不太好..
+       * ^
+       * required: Function<? super Member,? extends R>
+       * found: (e)->{ Mem[...])); }
+       * reason: cannot infer type-variable(s) R
+       * (argument mismatch; bad return type in lambda expression
+       * missing return value)
+       * where R,T are type-variables:
+       * R extends Object declared in method <R>map(Function<? super T,? extends R>)
+       * T extends Object declared in interface Stream
+       * ./StreamCamp.java:42: error: method map in interface Stream<T> cannot be
+       * applied to given types;
+       * List<Member> updateMemberId1 = member.stream().map(e -> { // 變數名稱不太好..
+       * ^
+       * required: Function<? super Member,? extends R>
+       * found: (e)->{ Mem[...])); }
+       * reason: cannot infer type-variable(s) R
+       * (argument mismatch; bad return type in lambda expression
+       * missing return value)
+       * where R,T are type-variables:
+       * R extends Object declared in method <R>map(Function<? super T,? extends R>)
+       * T extends Object declared in interface Stream
+       * Note: ./Main.java uses or overrides a deprecated API.
+       * Note: Recompile with -Xlint:deprecation for details.
+       * Note: ./StrangeHashMap.java uses unchecked or unsafe operations.
+       * Note: Recompile with -Xlint:unchecked for details.
+       * 2 errors
+       */
     }).collect(Collectors.toList()); // 安安你forEach當然不能接上啊，你看你前面的型態是Listㄟ
     updateMemberId.forEach(e -> System.out.println(e.getId()));
     updateMemberId.forEach(System.out::println);
