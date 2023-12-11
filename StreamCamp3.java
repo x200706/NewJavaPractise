@@ -78,10 +78,37 @@ class StreamCamp3 {
     // 流是惰性求值 一次性的 不影響原本資料
 
     /*-----------Optional-----------*/
+    // 跟Stream都是實現了Serializable和BaseStream接口
     // 可用於創建對象
     // 安全消費值
-    // 其實用單用get()是不太好的 要搭配isPresent做檢查嘛 那用流的思想來看 用個ifPresent一次處理不香嘛
-    
+    // 其實用單用get()是不太好的 要搭配isPresent()做檢查嘛 那用流的思想來看 用個ifPresent()一次處理不香嘛
+    // 獲取值就get()
+    // 安全獲取值 orElseGet() orElseThrow
+
+    // filter()過濾
+    // 判斷isPresent()
+
+    // map()數據轉換
+
+    /*-----------FunctionalInterface-----------*/
+    // JDK內的 不用硬記!!
+    // Consumer 消費 forEach()
+    // Fuction 計算 map()
+    // Predicate 判斷 filter() and() or()
+    // Supplier 生產
+
+    /*-----------方法引用::-----------*/
+    // 只有符合規則的可以用 匿名方法只return一個東西
+    // 引用類的靜態方法
+    // 引用物件的實例方法
+    // 引用類的實例方法
+    //TODO 微跳
+    // 構造函數引用類名::New
+
+    /*-----------高級用法-----------*/
+    // Stream對基礎型態有優化 mapToXxx幫忙轉換 不用手動拆裝箱
+    // 平行流 跳
+
   }// 我是result結尾
 
   // IntBinaryOperator這個interface只有一個方法要實作，他還是一個functional interface

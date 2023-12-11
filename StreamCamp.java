@@ -32,7 +32,7 @@ class StreamCamp {
       updateMember.setEmail(e.getEmail());
       updateMember.setPhone(e.getPhone());
       updateMember.setAge(e.getAge());
-      return updateMember;
+      return updateMember; // 我知道為何要rerutn啦 map通常都是拿變換後的值，只是做set作並沒有提供這個值
       // TODO 還沒看：map()需要返回的情境
       // 不return的錯誤：
       /*
