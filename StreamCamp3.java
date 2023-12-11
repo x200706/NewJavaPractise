@@ -54,6 +54,8 @@ class StreamCamp3 {
     // map()映射成其他元素 authors.stream.map(author::getAge) 或age->age+1
     // map()完還能一直map
 
+    // filter() 可以連用
+
     // sorted() 要想使流具有排序能力，可以在POJO實作Comparable以及下方的比較方法
     // 要小心溢出 https://www.imooc.com/wenda/detail/579600
 
@@ -61,9 +63,13 @@ class StreamCamp3 {
     // skip()跳過
     // flapMap() 對多個流的操作 有攤平的作用
 
+    // while
+    // 我覺得大師班的Stream適合已經善於使用Stream的人進階學習或當工具查閱，但觀念解釋的不清楚，在bili這個老師都有解答
+    // 例如為甚麼用IntStream等
+
     /*-----------流的終端操作-----------*/
     // forEach()
-    // count()
+    // count() 大師班疑問：toSet的情境？
     // max()&min()
     // collect()
 
