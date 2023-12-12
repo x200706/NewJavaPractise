@@ -63,9 +63,9 @@ class ProductGetter<T> {
   }
 
   public static <T, R, E> void printType(T t, R r, E e) {
-    System.out.println("t" + t.getClass().getSimpleName());
-    System.out.println("r" + r.getClass().getSimpleName());
-    System.out.println("e" + e.getClass().getSimpleName());
+    System.out.println("t " + t.getClass().getSimpleName());
+    System.out.println("r " + r.getClass().getSimpleName());
+    System.out.println("e " + e.getClass().getSimpleName());
   }
 
   // 泛型方法與可變參數
