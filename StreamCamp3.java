@@ -108,7 +108,7 @@ class StreamCamp3 {
     // 引用類的靜態方法
     // 引用物件的實例方法
     // 引用類的實例方法
-    //TODO 微跳
+    // TODO 微跳
     // 構造函數引用類名::New
 
     /*-----------高級用法-----------*/
@@ -138,16 +138,19 @@ class StreamCamp3 {
 // https://juejin.cn/post/7009925824899973150
 // 哇!!策略模式+自製@FunctionalInterface!!（真的覺得這篇比大師班還清楚）
 
+/*
+ * 舊lombok中Data=Getter+Setter 確認下新版有無EqualsAndHashCode
+ * 加入它distinct才會正常作用，不然吃到Object的HashCode就不是我們期望的（我們認為值相等也是相等，而非哈希符合才算相等，
+ * 所以必須重寫方法）
+ */
 @Data
-// 舊lombok中Data=Getter+Setter 確認下新版有無EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-// distinct才會正常作用，不然吃到Object的HashCode就不是我們期望的（我們認為值相等也是相等，而非哈希符合才算相等，所以必須重寫方法）
 class Author {
-  private Long id;
+  private Integer id;
   private String name;
-  private Interger age;
+  private Integer age;
   private String intro;
   // private List<Books>;
 }
