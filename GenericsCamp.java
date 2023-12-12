@@ -3,7 +3,7 @@
 import java.util.*;
 import java.lang.*;
 import lombok.*;
-import java.lang.reflect.Array; // Array要引用這麼細？真奇怪
+import java.lang.reflect.Array; // Array要引用這麼細？真奇怪 可能卡暫存吧
 
 class GenericsCamp {
   public void result() {
