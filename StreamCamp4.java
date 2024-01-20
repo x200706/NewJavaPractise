@@ -32,7 +32,7 @@ class StreamCamp4 { // 情境題：分類傳來消息的人是否非聯絡人
 
     // 判斷是否非聯絡人
     Boolean isStranger = Stream.of(receiverDetail.getContact()) // 創造聯絡人Stream
-        .map(contact -> contact.split("")) // 先切聯絡人
+        .map(contact -> contact.split(",")) // 先切聯絡人
         .flatMap(Arrays::stream) // 創造新Stream才能繼續中間操作
         .noneMatch(id -> id.equals(senderId));
 
